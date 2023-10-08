@@ -1,0 +1,90 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+
+rule MAKEBROWSE
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+
+rule PDBLINK
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++"C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+
+
+
+#Build steps
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\delay.c" -xcl_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.xcl" -macro_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\delay.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.tmp"
+  rspfile_name = D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.xcl.rsp
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\DIO.c" -xcl_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.xcl" -macro_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\DIO.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.tmp"
+  rspfile_name = D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.xcl.rsp
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\keypad.c" -xcl_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.xcl" -macro_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\keypad.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.tmp"
+  rspfile_name = D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.xcl.rsp
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\lcd.c" -xcl_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.xcl" -macro_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\lcd.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.tmp"
+  rspfile_name = D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.xcl.rsp
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\main.c" -xcl_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.xcl" -macro_file "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\main.c" -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Normal.h" -I C$:\ti\TivaWare_C_Series-2.2.0.295\ -Ol --predef_macros "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.tmp"
+  rspfile_name = D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.xcl.rsp
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.pbi : INDEXER D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.xcl |  $
+D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\delay.c
+  flags = "-out=D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.pbi" -f "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.xcl"
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.pbi : INDEXER D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.xcl |  $
+D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\DIO.c
+  flags = "-out=D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.pbi" -f "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.xcl"
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.pbi : INDEXER D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.xcl |  $
+D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\keypad.c
+  flags = "-out=D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.pbi" -f "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.xcl"
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.pbi : INDEXER D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.xcl |  $
+D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\lcd.c
+  flags = "-out=D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.pbi" -f "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.xcl"
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.pbi : INDEXER D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.xcl |  $
+D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\main.c
+  flags = "-out=D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.pbi" -f "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.xcl"
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3.pbw : MAKEBROWSE D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3.pbd
+  flags = "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3.pbd" -output "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3.pbw"
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part0.pbi : PDBLINK D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.pbi |  $
+D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.pbi
+  flags = -M "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part0.pbi" "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\delay.pbi" "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\DIO.pbi"
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part1.pbi : PDBLINK D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.pbi |  $
+D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.pbi
+  flags = -M "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part1.pbi" "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\keypad.pbi" "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\lcd.pbi"
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part2.pbi : PDBLINK D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.pbi
+  flags = -M "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part2.pbi" "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\main.pbi"
+
+build D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3.pbd : PDBLINK D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part0.pbi |  $
+D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part1.pbi $
+D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part2.pbi
+  flags = -M "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3.pbd" "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part0.pbi" "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part1.pbi" "D$:\MCTA\Current$ Semester\Embedded\Final_project\trial3\Debug\BrowseInfo\trial3_part2.pbi"
+
