@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<settings>
+    <InterruptLog>
+        <GraphEnabled>0</GraphEnabled>
+        <LogEnabled>0</LogEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <SumEnabled>0</SumEnabled>
+        <ShowTimeSum>1</ShowTimeSum>
+        <SumSortOrder>0</SumSortOrder>
+    </InterruptLog>
+    <DataLog>
+        <GraphEnabled>0</GraphEnabled>
+        <LogEnabled>0</LogEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <SumEnabled>0</SumEnabled>
+        <ShowTimeSum>1</ShowTimeSum>
+    </DataLog>
+    <Stack>
+        <FillEnabled>0</FillEnabled>
+        <OverflowWarningsEnabled>1</OverflowWarningsEnabled>
+        <WarningThreshold>90</WarningThreshold>
+        <SpWarningsEnabled>1</SpWarningsEnabled>
+        <WarnLogOnly>1</WarnLogOnly>
+        <UseTrigger>1</UseTrigger>
+        <TriggerName>main</TriggerName>
+        <LimitSize>0</LimitSize>
+        <ByteLimit>50</ByteLimit>
+    </Stack>
+    <Interrupts>
+        <Enabled>1</Enabled>
+    </Interrupts>
+    <MemConfig>
+        <Base>1</Base>
+        <Manual>0</Manual>
+        <Ddf>1</Ddf>
+        <TypeViol>0</TypeViol>
+        <Stop>1</Stop>
+    </MemConfig>
+    <Trace1>
+        <Enabled>0</Enabled>
+        <ShowSource>1</ShowSource>
+    </Trace1>
+    <Simulator>
+        <Freq>10000000</Freq>
+        <FreqHi>0</FreqHi>
+        <MultiCoreRunAll>1</MultiCoreRunAll>
+    </Simulator>
+    <LmiFtdiDriver>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <CStepIntDis>_ 0</CStepIntDis>
+        <LmiFtdiResetStyle>1</LmiFtdiResetStyle>
+        <LmiFtdiResetStrategy>0</LmiFtdiResetStrategy>
+        <LMIFTDIserialNo>0E2362C0</LMIFTDIserialNo>
+        <LMIFTDIfoundProbes />
+    </LmiFtdiDriver>
+    <PlDriver>
+        <MemConfigValue>C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\CONFIG\debugger\TexasInstruments\TM4C123GE6PM.ddf</MemConfigValue>
+        <FirstRun>0</FirstRun>
+    </PlDriver>
+    <DebugChecksum>
+        <Checksum>1580823408</Checksum>
+    </DebugChecksum>
+    <Exceptions>
+        <StopOnUncaught>_ 0</StopOnUncaught>
+        <StopOnThrow>_ 0</StopOnThrow>
+    </Exceptions>
+    <Disassembly>
+        <MixedMode>1</MixedMode>
+    </Disassembly>
+    <CallStack>
+        <ShowArgs>0</ShowArgs>
+    </CallStack>
+    <ArmDriver>
+        <EnableCache>0</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
+    </ArmDriver>
+    <Trace2>
+        <Enabled>0</Enabled>
+        <ShowSource>0</ShowSource>
+    </Trace2>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Bp0>_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.176.3" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.149.3" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.319.3" 0 0 1 "" 0 "" 0</Bp2>
+        <Count>3</Count>
+    </Breakpoints2>
+    <Aliases>
+        <A0>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\gpio.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\gpio.c"</A0>
+        <A1>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\interrupt.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\interrupt.c"</A1>
+        <A2>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\sysctl.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\sysctl.c"</A2>
+        <A3>_ "C:\Jenkins\workspace\TivaWare-Git-Release\DriverLib\build\DriverLib.test\driverlib\timer.c" "C:\ti\TivaWare_C_Series-2.2.0.295\driverlib\timer.c"</A3>
+        <Count>4</Count>
+        <SuppressDialog>1</SuppressDialog>
+    </Aliases>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
+        <Category2>_ 2</Category2>
+    </LogFile>
+</settings>
