@@ -1,3 +1,5 @@
+Drive Link: https://drive.google.com/drive/folders/10zPuur7hFEGiXTilziT9V1bLNemreWvS?usp=sharing
+
 The first part of the code is a function that allows the user to select between three modes (calculator, timer, and stopwatch) using a keypad and an LCD screen. The function is called select_mode, and it uses a switch statement to determine which mode to select based on the key that is pressed on the keypad.
 
 The function first clears the display and prints the message "select mode" on the first line of the LCD screen. Then, it enters a loop that reads a key from the keypad using the KEYPAD_getPressedKey2 function and waits for 400 milliseconds to avoid double pressing.
