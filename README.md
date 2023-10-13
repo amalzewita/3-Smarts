@@ -1,8 +1,7 @@
-# Drive Link: 
+Documents Link
+You can access all of the data and materials for the project at this [Link](https://drive.google.com/drive/folders/10zPuur7hFEGiXTilziT9V1bLNemreWvS?usp=sharing).
 
-https://drive.google.com/drive/folders/10zPuur7hFEGiXTilziT9V1bLNemreWvS?usp=sharing
-
-# Called Explanation
+# Code Explanation
 
 The first part of the code is a function that allows the user to select between three modes (calculator, timer, and stopwatch) using a keypad and an LCD screen. The function is called select_mode, and it uses a switch statement to determine which mode to select based on the key that is pressed on the keypad.
 
