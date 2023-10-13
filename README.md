@@ -1,5 +1,8 @@
-# videos Link
-You can access all videos for the project at this [Link](https://drive.google.com/drive/folders/10zPuur7hFEGiXTilziT9V1bLNemreWvS?usp=sharing).
+# Project Information
+
+- Project: `[3 Smart Modes]`
+- Authors: `[Amal Amr]`, `[Malak Tarek]`, `[Mark Mohab]`, `[Youssef Sherif]`, `[Youssef Amir]`
+- Video: [Link](https://drive.google.com/drive/folders/10zPuur7hFEGiXTilziT9V1bLNemreWvS?usp=sharing)
 
 # Code Explanation
 
